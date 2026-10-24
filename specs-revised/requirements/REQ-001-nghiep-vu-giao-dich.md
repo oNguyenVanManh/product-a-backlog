@@ -36,12 +36,22 @@ related: []
 
 ### 2.2 Bối cảnh & Mục đích
 
-Chợ bán buôn thủy sản 桜水産市場 là **chợ sản xuất (産地市場)** quy mô vừa gần cảng cá, thu mua trực tiếp
-từ tàu cá. Sau khi Luật chợ bán buôn sửa đổi năm 2020 cho phép mỗi chợ tự ban hành quy tắc vận hành
-riêng (業務規程), ban quản lý vừa chốt xong bộ quy tắc của mình và cần hệ thống phản ánh **đúng bộ quy**
-**tắc đó**, không phải một hệ thống chợ đấu giá chung chung.
+Tài liệu này mô tả phần nghiệp vụ giao dịch của hệ thống cho khách hàng 桜水産市場.
 
-Hiện toàn bộ giao dịch giữa 4 vai trò tham gia chợ được quản lý thủ công bằng điện thoại, fax và sổ ghi tay.
+**Điều chi phối toàn bộ thiết kế ở đây:** hệ thống phải thi hành bộ quy tắc vận hành (業務規程) do
+chính chợ này ban hành, không phải một mô hình chợ đấu giá dựng theo khuôn mẫu phổ thông. Hai hệ quả
+kỹ thuật kéo theo:
+
+1. **Thoả thuận trực tiếp (相対取引) là luồng chính, không phải nhánh phụ.** Phần lớn giá trị giao
+   dịch đi qua đường này chứ không qua phiên đấu giá công khai (せり). Vì vậy mô hình dữ liệu và màn
+   hình lấy giao dịch thoả thuận làm trung tâm; phiên đấu giá là một nguồn sinh giao dịch, không phải
+   khung bao quanh mọi thứ.
+2. **Bốn vai trò tham gia chợ không đồng hạng về quyền.** Chúng chia làm hai cấp pháp lý khác nhau,
+   nên tư cách giao dịch phải là một thực thể riêng có hiệu lực theo thời gian, không được rút gọn
+   thành một cờ bật/tắt trên hồ sơ bên tham gia.
+
+Nghiệp vụ hiện tại chạy hoàn toàn thủ công. Hệ thống thay thế phải giữ được những thao tác buộc phải
+có con người (thẩm định bằng mắt, ký hiệu viết tay của chợ) thay vì cố số hoá chúng.
 
 ### 2.3 Phạm vi
 

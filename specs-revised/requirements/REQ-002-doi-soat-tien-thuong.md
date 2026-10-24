@@ -36,12 +36,19 @@ related: []
 
 ### 2.2 Bối cảnh & Mục đích
 
-Chợ bán buôn thủy sản 桜水産市場 là **chợ sản xuất (産地市場)** quy mô vừa gần cảng cá, thu mua trực tiếp
-từ tàu cá. Sau khi Luật chợ bán buôn sửa đổi năm 2020 cho phép mỗi chợ tự ban hành quy tắc vận hành
-riêng (業務規程), ban quản lý vừa chốt xong bộ quy tắc của mình và cần hệ thống phản ánh **đúng bộ quy**
-**tắc đó**, không phải một hệ thống chợ đấu giá chung chung.
+Tài liệu này mô tả phần đối soát, chốt sổ và tiền khuyến khích của hệ thống cho khách hàng 桜水産市場.
 
-Hiện toàn bộ giao dịch giữa 4 vai trò tham gia chợ được quản lý thủ công bằng điện thoại, fax và sổ ghi tay.
+**Điều chi phối toàn bộ thiết kế ở đây:** biểu suất và quy tắc tính thưởng do chính chợ ban hành
+trong bộ quy tắc vận hành (業務規程) của mình, và chúng **đổi theo thời gian**. Ba hệ quả kỹ thuật:
+
+1. **Mọi phép tính tra biểu suất theo ngày nghiệp vụ của giao dịch**, không lấy bản ghi mới nhất.
+   Tính lại một kỳ đã qua phải cho ra đúng con số của kỳ đó, dù biểu suất hiện tại đã khác.
+2. **Sổ chỉ ghi thêm.** Sai sót được sửa bằng bút toán đảo hoặc bút toán điều chỉnh trỏ về dòng gốc,
+   không ghi đè. Thưởng thanh toán đúng hạn (完納奨励金) tuân theo đúng nguyên tắc này.
+3. **Ngày nghiệp vụ khác ngày lịch**, và có ngày chợ không họp. Việc khoá sổ phải được chặn ở tầng
+   dữ liệu để job nền và công cụ nạp dữ liệu không đi vòng qua được.
+
+Hiện khâu đối soát làm thủ công trên sổ ghi tay, nên không có vết kiểm toán nào truy ngược được.
 
 ### 2.3 Phạm vi
 
