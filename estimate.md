@@ -17,15 +17,15 @@ confidence thấp nhất) — tôi không chọn tay.
 
 | Issue | Skill chấm (Scope × Complexity → SWP) | Tôi chốt | Lý do |
 |---|---|---|---|
-| [#139] [FNC-004·QA] Bảng theo dõi hiệu lực tư cách | S1 × C1 → **1** | S3 × C1 → **4** | Skill đọc "bảng theo dõi" thành một thành phần hẹp. Thực tế QA màn này phải phủ **cả hai cấp quyền pháp lý** 許可 (仲卸) và 承認 (売買参加者), cộng ca hết hạn tư cách — bề rộng là 3, không phải 1. Độ khó giữ nguyên vì vẫn là validation quen thuộc. |
-| [#125] [PRJ-43] Ma trận tuân thủ + traceability | S3 × C1 → **4** | **giữ nguyên** | Giữ vì đúng: là việc tài liệu lặp lại, không có quyết định kỹ thuật nào. Bề rộng 3 phản ánh việc phải quét hết các ID yêu cầu; độ khó 1 phản ánh không có tích hợp hay trạng thái phức tạp. |
-| [#311] [FNC-061·Native] Hàng đợi offline trên thiết bị | S5 × C3 → **10** | S8 × C3 → **16** | Hàng đợi offline phải chạy trên iOS, Android **và** phía server nhận lại — đó là nhiều nền tảng, bề rộng 8 chứ không phải 5. Độ khó giữ 3. |
-| [#329] [PRJ-10·BrSE] Đặc tả 30 màn hình web | S8 × C1 → **10** | S8 × C2 → **12** | Skill cho độ khó 1 ("từng màn theo mẫu"). Thực tế đặc tả phải viết cho khách Nhật duyệt và phải diễn đạt đúng hai cấp quyền trên từng màn — độ khó 2. Bề rộng giữ 8. |
-| [#398] [PRJ-29·BE] Kiểm thử hồi quy sau mỗi vòng sửa lỗi | S2 × C1 → **3** | **giữ nguyên** | Giữ vì đúng: chạy lại bộ ca đã có là việc lặp. Bề rộng thực của hồi quy nằm ở issue QA của từng chức năng, không ở phần BE này — gộp vào đây là đếm hai lần. |
+| [#139](https://github.com/oNguyenVanManh/product-a-backlog/issues/139) [FNC-004·QA] Bảng theo dõi hiệu lực tư cách | S1 × C1 → **1** | S3 × C1 → **4** | Skill đọc "bảng theo dõi" thành một thành phần hẹp. Thực tế QA màn này phải phủ **cả hai cấp quyền pháp lý** 許可 (仲卸) và 承認 (売買参加者), cộng ca hết hạn tư cách — bề rộng là 3, không phải 1. Độ khó giữ nguyên vì vẫn là validation quen thuộc. |
+| [#125](https://github.com/oNguyenVanManh/product-a-backlog/issues/125) [PRJ-43] Ma trận tuân thủ + traceability | S3 × C1 → **4** | **giữ nguyên** | Giữ vì đúng: là việc tài liệu lặp lại, không có quyết định kỹ thuật nào. Bề rộng 3 phản ánh việc phải quét hết các ID yêu cầu; độ khó 1 phản ánh không có tích hợp hay trạng thái phức tạp. |
+| [#311](https://github.com/oNguyenVanManh/product-a-backlog/issues/311) [FNC-061·Native] Hàng đợi offline trên thiết bị | S5 × C3 → **10** | S8 × C3 → **16** | Hàng đợi offline phải chạy trên iOS, Android **và** phía server nhận lại — đó là nhiều nền tảng, bề rộng 8 chứ không phải 5. Độ khó giữ 3. |
+| [#329](https://github.com/oNguyenVanManh/product-a-backlog/issues/329) [PRJ-10·BrSE] Đặc tả 30 màn hình web | S8 × C1 → **10** | S8 × C2 → **12** | Skill cho độ khó 1 ("từng màn theo mẫu"). Thực tế đặc tả phải viết cho khách Nhật duyệt và phải diễn đạt đúng hai cấp quyền trên từng màn — độ khó 2. Bề rộng giữ 8. |
+| [#398](https://github.com/oNguyenVanManh/product-a-backlog/issues/398) [PRJ-29·BE] Kiểm thử hồi quy sau mỗi vòng sửa lỗi | S2 × C1 → **3** | **giữ nguyên** | Giữ vì đúng: chạy lại bộ ca đã có là việc lặp. Bề rộng thực của hồi quy nằm ở issue QA của từng chức năng, không ở phần BE này — gộp vào đây là đếm hai lần. |
 
 ### Một con số tôi đã chặn lại
 
-Lần đầu tôi chọn **20 điểm** cho #311. Ma trận SWP chỉ có **đúng một ô** cho giá trị 20:
+Lần đầu tôi chọn **20 điểm** cho [#311](https://github.com/oNguyenVanManh/product-a-backlog/issues/311). Ma trận SWP chỉ có **đúng một ô** cho giá trị 20:
 Scope 13 × Complexity 2. Scope 13 nghĩa là *"rộng cấp phát hành hoặc xuyên hệ thống"* — gán nhãn đó
 cho hàng đợi offline của **một** chức năng di động là sai về cấu trúc, và vì hiệu chỉnh lan theo tầng
 nên nó sẽ kéo theo issue khác. Đổi sang **16 điểm** (Scope 8 × Complexity 3): vẫn mức khó, nhưng bề
@@ -38,9 +38,9 @@ phải trùng khít cả bốn. Không lan theo độ giống tiêu đề, khôn
 
 | Luật | Tầng | Δ Scope | Δ Complexity | Từ issue | Lan sang |
 |---|---|---:|---:|---|---:|
-| cal-001 | `QA / test-design / single-component / routine` | +2 | 0 | #139 | 15 issue |
-| cal-002 | `UI / feature / cross-layer / stateful+concurrency` | +1 | 0 | #311 | 1 issue |
-| cal-003 | `Unknown / documentation / multi-component / routine` | 0 | +1 | #125, #329 | 11 issue |
+| cal-001 | `QA / test-design / single-component / routine` | +2 | 0 | [#139](https://github.com/oNguyenVanManh/product-a-backlog/issues/139) | 15 issue |
+| cal-002 | `UI / feature / cross-layer / stateful+concurrency` | +1 | 0 | [#311](https://github.com/oNguyenVanManh/product-a-backlog/issues/311) | 1 issue |
+| cal-003 | `Unknown / documentation / multi-component / routine` | 0 | +1 | [#125](https://github.com/oNguyenVanManh/product-a-backlog/issues/125), [#329](https://github.com/oNguyenVanManh/product-a-backlog/issues/329) | 11 issue |
 
 **Tổng SWP: 1.323 → 1.392 (+5,2%)** · 5 approved · 26 propagated · 315 unchanged · 0 dòng chạm biên dải.
 
@@ -83,25 +83,25 @@ Hai quy tắc áp nhất quán: mọi issue không thuộc EP-19 đều đúng `
 
 | Epic | Số issue | Tổng SWP | Tổng giờ | Ghi chú |
 |---|--:|--:|--:|---|
-| `EP-01` Quản lý bên tham gia và tư cách giao dịch | 21 | 52 | 208 | Ràng buộc hai cấp quyền 許可/承認 |
-| `EP-02` Xác thực và phân quyền | 27 | 67 | 268 | — |
-| `EP-03` Tiếp nhận lô và thẩm định | 19 | 62 | 248 | Giữ người trong vòng lặp (CAP-HUMAN-01) |
-| `EP-04` Giao dịch thỏa thuận và đấu giá | 19 | 54 | 216 | 相対取引 chiếm phần lớn giá trị |
-| `EP-05` Theo dõi giao hàng | 29 | 89 | 356 | — |
-| `EP-06` Đối soát, chốt sổ và điều chỉnh | 26 | 71 | 284 | 業務日 và khoá sổ |
-| `EP-07` Tiền khuyến khích thanh toán đúng hạn | 22 | 69 | 276 | 完納奨励金 |
-| `EP-08` Quản lý quy định và biểu suất | 18 | 46 | 184 | — |
-| `EP-09` Báo cáo và xuất dữ liệu | 13 | 43 | 172 | — |
-| `EP-10` Kiểm toán và lưu trữ | 13 | 32 | 128 | — |
-| `EP-11` Thông báo | 15 | 40 | 160 | — |
-| `EP-12` Liên kết hệ thống kế toán | 10 | 27 | 108 | — |
-| `EP-13` Danh mục nền và đồng bộ offline | 19 | 76 | 304 | — |
-| `EP-14` Yêu cầu và thiết kế xuyên suốt | 32 | 117 | 468 | — |
-| `EP-15` Nền tảng ứng dụng và hạ tầng | 37 | 112 | 448 | 業務日 và khoá sổ |
-| `EP-16` Kiểm thử và chất lượng | 59 | 197 | 788 | — |
-| `EP-17` Chuyển đổi dữ liệu | 19 | 76 | 304 | — |
-| `EP-18` UAT, phát hành và bàn giao | 32 | 122 | 488 | — |
-| `EP-19` Quản trị dự án và cầu nối nghiệp vụ | 22 | 40 | 1,920 | Quy giờ theo quy tắc B |
+| [`EP-01` #1](https://github.com/oNguyenVanManh/product-a-backlog/issues/1) Quản lý bên tham gia và tư cách giao dịch | 21 | 52 | 208 | Ràng buộc hai cấp quyền 許可/承認 |
+| [`EP-02` #2](https://github.com/oNguyenVanManh/product-a-backlog/issues/2) Xác thực và phân quyền | 27 | 67 | 268 | — |
+| [`EP-03` #3](https://github.com/oNguyenVanManh/product-a-backlog/issues/3) Tiếp nhận lô và thẩm định | 19 | 62 | 248 | Giữ người trong vòng lặp (CAP-HUMAN-01) |
+| [`EP-04` #4](https://github.com/oNguyenVanManh/product-a-backlog/issues/4) Giao dịch thỏa thuận và đấu giá | 19 | 54 | 216 | 相対取引 chiếm phần lớn giá trị |
+| [`EP-05` #5](https://github.com/oNguyenVanManh/product-a-backlog/issues/5) Theo dõi giao hàng | 29 | 89 | 356 | — |
+| [`EP-06` #6](https://github.com/oNguyenVanManh/product-a-backlog/issues/6) Đối soát, chốt sổ và điều chỉnh | 26 | 71 | 284 | 業務日 và khoá sổ |
+| [`EP-07` #7](https://github.com/oNguyenVanManh/product-a-backlog/issues/7) Tiền khuyến khích thanh toán đúng hạn | 22 | 69 | 276 | 完納奨励金 |
+| [`EP-08` #8](https://github.com/oNguyenVanManh/product-a-backlog/issues/8) Quản lý quy định và biểu suất | 18 | 46 | 184 | — |
+| [`EP-09` #9](https://github.com/oNguyenVanManh/product-a-backlog/issues/9) Báo cáo và xuất dữ liệu | 13 | 43 | 172 | — |
+| [`EP-10` [#10](https://github.com/oNguyenVanManh/product-a-backlog/issues/10)](https://github.com/oNguyenVanManh/product-a-backlog/issues/10) Kiểm toán và lưu trữ | 13 | 32 | 128 | — |
+| [`EP-11` [#11](https://github.com/oNguyenVanManh/product-a-backlog/issues/11)](https://github.com/oNguyenVanManh/product-a-backlog/issues/11) Thông báo | 15 | 40 | 160 | — |
+| [`EP-12` [#12](https://github.com/oNguyenVanManh/product-a-backlog/issues/12)](https://github.com/oNguyenVanManh/product-a-backlog/issues/12) Liên kết hệ thống kế toán | 10 | 27 | 108 | — |
+| [`EP-13` [#13](https://github.com/oNguyenVanManh/product-a-backlog/issues/13)](https://github.com/oNguyenVanManh/product-a-backlog/issues/13) Danh mục nền và đồng bộ offline | 19 | 76 | 304 | — |
+| [`EP-14` [#14](https://github.com/oNguyenVanManh/product-a-backlog/issues/14)](https://github.com/oNguyenVanManh/product-a-backlog/issues/14) Yêu cầu và thiết kế xuyên suốt | 32 | 117 | 468 | — |
+| [`EP-15` [#15](https://github.com/oNguyenVanManh/product-a-backlog/issues/15)](https://github.com/oNguyenVanManh/product-a-backlog/issues/15) Nền tảng ứng dụng và hạ tầng | 37 | 112 | 448 | 業務日 và khoá sổ |
+| [`EP-16` [#16](https://github.com/oNguyenVanManh/product-a-backlog/issues/16)](https://github.com/oNguyenVanManh/product-a-backlog/issues/16) Kiểm thử và chất lượng | 59 | 197 | 788 | — |
+| [`EP-17` [#17](https://github.com/oNguyenVanManh/product-a-backlog/issues/17)](https://github.com/oNguyenVanManh/product-a-backlog/issues/17) Chuyển đổi dữ liệu | 19 | 76 | 304 | — |
+| [`EP-18` [#18](https://github.com/oNguyenVanManh/product-a-backlog/issues/18)](https://github.com/oNguyenVanManh/product-a-backlog/issues/18) UAT, phát hành và bàn giao | 32 | 122 | 488 | — |
+| [`EP-19` [#19](https://github.com/oNguyenVanManh/product-a-backlog/issues/19)](https://github.com/oNguyenVanManh/product-a-backlog/issues/19) Quản trị dự án và cầu nối nghiệp vụ | 22 | 40 | 1,920 | Quy giờ theo quy tắc B |
 | **Tổng** | **452** | **1392** | **7,328** | = **916 MD** (8h/ngày) |
 
 *Số issue đếm cả issue cha và issue con; SWP của epic là tổng SWP issue lá nên không đếm trùng — 19 epic cộng lại đúng bằng 1.392, bằng tổng 346 issue lá.*
@@ -112,25 +112,25 @@ Hai quy tắc áp nhất quán: mọi issue không thuộc EP-19 đều đúng `
 
 | Phần (epic) | LAB-1 gộp (MD) | LAB-5 (MD) | Chênh | Vì sao |
 |---|--:|--:|--:|---|
-| `EP-01` Quản lý bên tham gia và tư cách giao d | 29.4 | 26.0 | -3.4 (-12%) | Giảm nhẹ dù QA đã được nâng ở #139 — phần BE/FE vẫn thấp hơn LAB-1. |
-| `EP-02` Xác thực và phân quyền | 32.6 | 33.5 | +0.9 (+3%) | Gần như trùng khít. |
-| `EP-03` Tiếp nhận lô và thẩm định | 33.9 | 31.0 | -2.9 (-9%) | — |
-| `EP-04` Giao dịch thỏa thuận và đấu giá | 33.6 | 27.0 | -6.6 (-20%) | — |
-| `EP-05` Theo dõi giao hàng | 55.1 | 44.5 | -10.6 (-19%) | 7 màn native + luồng offline: LAB-1 cấp 55,1 MD, SWP đọc là 44,5 MD. |
-| `EP-06` Đối soát, chốt sổ và điều chỉnh | 39.8 | 35.5 | -4.3 (-11%) | — |
-| `EP-07` Tiền khuyến khích thanh toán đúng hạn | 37.8 | 34.5 | -3.3 (-9%) | — |
-| `EP-08` Quản lý quy định và biểu suất | 28.0 | 23.0 | -5.0 (-18%) | — |
-| `EP-09` Báo cáo và xuất dữ liệu | 18.8 | 21.5 | +2.7 (+14%) | Tăng nhẹ: SWP đọc trung tâm báo cáo rộng hơn LAB-1 ước. |
-| `EP-10` Kiểm toán và lưu trữ | 17.7 | 16.0 | -1.7 (-10%) | — |
-| `EP-11` Thông báo | 19.2 | 20.0 | +0.8 (+4%) | Gần như trùng khít. |
-| `EP-12` Liên kết hệ thống kế toán | 16.5 | 13.5 | -3.0 (-18%) | — |
-| `EP-13` Danh mục nền và đồng bộ offline | 31.7 | 38.0 | +6.3 (+20%) | **Hướng ngược lại.** Tăng vì tôi nâng hàng đợi offline #311 từ 10 lên 16 SWP khi kiểm issue mẫu — bề rộng thật là iOS + Android + server. |
-| `EP-14` Yêu cầu và thiết kế xuyên suốt | 71.0 | 58.5 | -12.5 (-18%) | Đặc tả 30 màn đã được tôi nâng từ 10 lên 12 SWP, nhưng vẫn thấp hơn 17 MD của LAB-1 vì cùng lý do lặp. |
-| `EP-15` Nền tảng ứng dụng và hạ tầng | 87.0 | 56.0 | -31.0 (-36%) | Cùng nguyên nhân: 4 issue Terraform và CI/CD được SWP đọc theo số thành phần, LAB-1 ước theo số môi trường phải dựng thật. |
-| `EP-16` Kiểm thử và chất lượng | 153.0 | 98.5 | -54.5 (-36%) | **Chênh lớn nhất.** SWP đọc "unit test module nghiệp vụ lõi" là một việc bề rộng vừa, độ khó vừa. LAB-1 cấp 24 MD vì phải viết test cho 63 chức năng — khối lượng đến từ **số lần lặp**, mà SWP không đo lặp. |
-| `EP-17` Chuyển đổi dữ liệu | 38.0 | 38.0 | +0.0 (+0%) | Trùng khít, ngẫu nhiên. |
-| `EP-18` UAT, phát hành và bàn giao | 76.0 | 61.0 | -15.0 (-20%) | Hỗ trợ UAT 6 tuần là việc kéo dài theo lịch, giống EP-19 — SWP đo kích thước nên đọc nhỏ hơn thực tế. |
-| `EP-19` Quản trị dự án và cầu nối nghiệp vụ | 240.0 | 240.0 | +0.0 (+0%) | **Trùng khít tuyệt đối**, vì quy tắc B dùng đúng tỷ lệ phân bổ 70%/50% × 10 tháng mà LAB-1 đã dùng. Đây không phải xác nhận độc lập. |
+| [`EP-01` #1](https://github.com/oNguyenVanManh/product-a-backlog/issues/1) Quản lý bên tham gia và tư cách giao d | 29.4 | 26.0 | -3.4 (-12%) | Giảm nhẹ dù QA đã được nâng ở [#139](https://github.com/oNguyenVanManh/product-a-backlog/issues/139) — phần BE/FE vẫn thấp hơn LAB-1. |
+| [`EP-02` #2](https://github.com/oNguyenVanManh/product-a-backlog/issues/2) Xác thực và phân quyền | 32.6 | 33.5 | +0.9 (+3%) | Gần như trùng khít. |
+| [`EP-03` #3](https://github.com/oNguyenVanManh/product-a-backlog/issues/3) Tiếp nhận lô và thẩm định | 33.9 | 31.0 | -2.9 (-9%) | — |
+| [`EP-04` #4](https://github.com/oNguyenVanManh/product-a-backlog/issues/4) Giao dịch thỏa thuận và đấu giá | 33.6 | 27.0 | -6.6 (-20%) | — |
+| [`EP-05` #5](https://github.com/oNguyenVanManh/product-a-backlog/issues/5) Theo dõi giao hàng | 55.1 | 44.5 | -10.6 (-19%) | 7 màn native + luồng offline: LAB-1 cấp 55,1 MD, SWP đọc là 44,5 MD. |
+| [`EP-06` #6](https://github.com/oNguyenVanManh/product-a-backlog/issues/6) Đối soát, chốt sổ và điều chỉnh | 39.8 | 35.5 | -4.3 (-11%) | — |
+| [`EP-07` #7](https://github.com/oNguyenVanManh/product-a-backlog/issues/7) Tiền khuyến khích thanh toán đúng hạn | 37.8 | 34.5 | -3.3 (-9%) | — |
+| [`EP-08` #8](https://github.com/oNguyenVanManh/product-a-backlog/issues/8) Quản lý quy định và biểu suất | 28.0 | 23.0 | -5.0 (-18%) | — |
+| [`EP-09` #9](https://github.com/oNguyenVanManh/product-a-backlog/issues/9) Báo cáo và xuất dữ liệu | 18.8 | 21.5 | +2.7 (+14%) | Tăng nhẹ: SWP đọc trung tâm báo cáo rộng hơn LAB-1 ước. |
+| [`EP-10` [#10](https://github.com/oNguyenVanManh/product-a-backlog/issues/10)](https://github.com/oNguyenVanManh/product-a-backlog/issues/10) Kiểm toán và lưu trữ | 17.7 | 16.0 | -1.7 (-10%) | — |
+| [`EP-11` [#11](https://github.com/oNguyenVanManh/product-a-backlog/issues/11)](https://github.com/oNguyenVanManh/product-a-backlog/issues/11) Thông báo | 19.2 | 20.0 | +0.8 (+4%) | Gần như trùng khít. |
+| [`EP-12` [#12](https://github.com/oNguyenVanManh/product-a-backlog/issues/12)](https://github.com/oNguyenVanManh/product-a-backlog/issues/12) Liên kết hệ thống kế toán | 16.5 | 13.5 | -3.0 (-18%) | — |
+| [`EP-13` [#13](https://github.com/oNguyenVanManh/product-a-backlog/issues/13)](https://github.com/oNguyenVanManh/product-a-backlog/issues/13) Danh mục nền và đồng bộ offline | 31.7 | 38.0 | +6.3 (+20%) | **Hướng ngược lại.** Tăng vì tôi nâng hàng đợi offline [#311](https://github.com/oNguyenVanManh/product-a-backlog/issues/311) từ 10 lên 16 SWP khi kiểm issue mẫu — bề rộng thật là iOS + Android + server. |
+| [`EP-14` [#14](https://github.com/oNguyenVanManh/product-a-backlog/issues/14)](https://github.com/oNguyenVanManh/product-a-backlog/issues/14) Yêu cầu và thiết kế xuyên suốt | 71.0 | 58.5 | -12.5 (-18%) | Đặc tả 30 màn đã được tôi nâng từ 10 lên 12 SWP, nhưng vẫn thấp hơn 17 MD của LAB-1 vì cùng lý do lặp. |
+| [`EP-15` [#15](https://github.com/oNguyenVanManh/product-a-backlog/issues/15)](https://github.com/oNguyenVanManh/product-a-backlog/issues/15) Nền tảng ứng dụng và hạ tầng | 87.0 | 56.0 | -31.0 (-36%) | Cùng nguyên nhân: 4 issue Terraform và CI/CD được SWP đọc theo số thành phần, LAB-1 ước theo số môi trường phải dựng thật. |
+| [`EP-16` [#16](https://github.com/oNguyenVanManh/product-a-backlog/issues/16)](https://github.com/oNguyenVanManh/product-a-backlog/issues/16) Kiểm thử và chất lượng | 153.0 | 98.5 | -54.5 (-36%) | **Chênh lớn nhất.** SWP đọc "unit test module nghiệp vụ lõi" là một việc bề rộng vừa, độ khó vừa. LAB-1 cấp 24 MD vì phải viết test cho 63 chức năng — khối lượng đến từ **số lần lặp**, mà SWP không đo lặp. |
+| [`EP-17` [#17](https://github.com/oNguyenVanManh/product-a-backlog/issues/17)](https://github.com/oNguyenVanManh/product-a-backlog/issues/17) Chuyển đổi dữ liệu | 38.0 | 38.0 | +0.0 (+0%) | Trùng khít, ngẫu nhiên. |
+| [`EP-18` [#18](https://github.com/oNguyenVanManh/product-a-backlog/issues/18)](https://github.com/oNguyenVanManh/product-a-backlog/issues/18) UAT, phát hành và bàn giao | 76.0 | 61.0 | -15.0 (-20%) | Hỗ trợ UAT 6 tuần là việc kéo dài theo lịch, giống EP-19 — SWP đo kích thước nên đọc nhỏ hơn thực tế. |
+| [`EP-19` [#19](https://github.com/oNguyenVanManh/product-a-backlog/issues/19)](https://github.com/oNguyenVanManh/product-a-backlog/issues/19) Quản trị dự án và cầu nối nghiệp vụ | 240.0 | 240.0 | +0.0 (+0%) | **Trùng khít tuyệt đối**, vì quy tắc B dùng đúng tỷ lệ phân bổ 70%/50% × 10 tháng mà LAB-1 đã dùng. Đây không phải xác nhận độc lập. |
 | **Tổng** | **1,059.1** | **916.0** | **-143.1 (-13.5%)** | |
 
 ### Đọc bảng này cho đúng

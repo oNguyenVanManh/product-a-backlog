@@ -8,7 +8,7 @@
 
 ## 1. Tổng quan
 
-Backlog này break từ bộ thiết kế **LAB-4 nộp ngày 20/10/2026**, bản **đã sửa theo góp ý của giảng
+Backlog này break từ bộ thiết kế **LAB-4 nộp ngày 11/10/2026**, bản **đã sửa theo góp ý của giảng
 viên** (3 nhóm A/B/C). Bản đã sửa đặt trong repo tại [`specs-revised/`](./specs-revised/) — 131 file
 markdown, 93 tài liệu nghiệp vụ.
 
@@ -35,8 +35,9 @@ markdown, 93 tài liệu nghiệp vụ.
 | GitHub Project | <https://github.com/users/oNguyenVanManh/projects/2> |
 | Báo cáo HTML của skill chấm SWP | [`reports/estimate-swp-report.html`](./reports/estimate-swp-report.html) |
 
-Cả repo và Project đã **mở thử bằng cửa sổ ẩn danh**, không đăng nhập vẫn xem được đầy đủ issue,
-trạng thái, Iteration và các trường điểm.
+Cả repo và Project đã được kiểm truy cập **không kèm thông tin đăng nhập** (yêu cầu HTTP sạch cookie):
+repo, file markdown và trang Project đều trả về 200 và hiện đủ nội dung. Người review nên mở lại bằng
+cửa sổ ẩn danh để tự xác nhận.
 
 Báo cáo HTML tự chứa (1,3 MB, không gọi tài nguyên ngoài) — tải về mở bằng trình duyệt là chạy.
 GitHub không render HTML trong repo, nên cần bấm **Download raw file** rồi mở.
@@ -89,7 +90,7 @@ Không có thư mục `skills/`: bài này dùng skill có sẵn của kit (`tkm
 | [`PREMISE.md`](./PREMISE.md) §1 — 20 file technical-design mới | 20 issue cha rải khắp EP-01…EP-13 | Spec mới thêm sau LAB-4 |
 
 Năm nhóm ràng buộc nghiệp vụ đặc thù được gắn nhãn riêng trên GitHub (`kc-incentive`,
-`kc-negotiated`, `kc-two-tier`, `kc-human`, `kc-business-day`) và phủ **45 issue**. Chi tiết vì sao
+`kc-negotiated`, `kc-two-tier`, `kc-human`, `kc-business-day`) và phủ **150 issue** (6 epic + 39 issue + 105 sub-issue). Chi tiết vì sao
 tách riêng: [`task-breakdown.md`](./task-breakdown.md) mục 3.
 
 ---

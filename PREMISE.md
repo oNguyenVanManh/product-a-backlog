@@ -12,18 +12,18 @@ phát hiện khi break task.
 
 | Spec (mã/file) | Thêm/Bỏ/Sửa | Trước → sau | Vì sao | Issue bị ảnh hưởng |
 |---|---|---|---|---|
-| `_extra/decisions/ADR-009-xac-nhan-ket-qua-dau-gia.md` | Thêm | *(không có)* → ADR mới, 4 mục | Góp ý review LAB-4 (A1): LAB-4 mô tả phiên đấu giá せり nhưng không nói kết quả phiên được **xác nhận** ra sao trước khi thành giao dịch chính thức. Thiếu mốc này thì sổ chỉ-ghi-thêm không có điểm bắt đầu hợp lệ. | `EP-04` · `IS-FNC-014` · `IS-FNC-015` |
-| `specs/system-design/database-design/trading/TRADE_DB.md` | Sửa | thiếu trạng thái xác nhận → thêm `confirm_status`, `confirmed_by`, `confirmed_at` | Hệ quả trực tiếp của ADR-009 — không có 3 cột này thì không ghi được ai xác nhận, lúc nào. | `IS-FNC-014` · `IS-PRJ-05` |
-| `specs/trading/screen-specification/SCR_09_SPEC.md` | Sửa | không có sơ đồ trạng thái → thêm state diagram + 3 ràng buộc chuyển trạng thái | Góp ý review LAB-4 (A1): màn ghi kết quả phiên không nói rõ trạng thái nào cho sửa, trạng thái nào khoá. | `IS-FNC-014` |
-| `specs/system-design/database-design/incentive/INCENTIVE_DB.md` | Sửa | ghi đè dòng thưởng → thêm `entry_type`, `adjusts_id`, `posted_period`; đổi UNIQUE key | Góp ý review LAB-4 (A2): LAB-4 cho phép tính lại và **ghi đè** dòng thưởng đã chốt kỳ. Sai với sổ chỉ-ghi-thêm và sai với 完納奨励金 — điều chỉnh sau khi chốt kỳ phải là bút toán mới. | `EP-07` toàn bộ · `IS-FNC-036` |
+| `_extra/decisions/ADR-009-xac-nhan-ket-qua-dau-gia.md` | Thêm | *(không có)* → ADR mới, 4 mục | Góp ý review LAB-4 (A1): LAB-4 mô tả phiên đấu giá せり nhưng không nói kết quả phiên được **xác nhận** ra sao trước khi thành giao dịch chính thức. Thiếu mốc này thì sổ chỉ-ghi-thêm không có điểm bắt đầu hợp lệ. | [EP-04 #4](https://github.com/oNguyenVanManh/product-a-backlog/issues/4) · [#33](https://github.com/oNguyenVanManh/product-a-backlog/issues/33) · [#34](https://github.com/oNguyenVanManh/product-a-backlog/issues/34) |
+| `specs/system-design/database-design/trading/TRADE_DB.md` | Sửa | thiếu trạng thái xác nhận → thêm `confirm_status`, `confirmed_by`, `confirmed_at` | Hệ quả trực tiếp của ADR-009 — không có 3 cột này thì không ghi được ai xác nhận, lúc nào. | [#33](https://github.com/oNguyenVanManh/product-a-backlog/issues/33) · [#92](https://github.com/oNguyenVanManh/product-a-backlog/issues/92) |
+| `specs/trading/screen-specification/SCR_09_SPEC.md` | Sửa | không có sơ đồ trạng thái → thêm state diagram + 3 ràng buộc chuyển trạng thái | Góp ý review LAB-4 (A1): màn ghi kết quả phiên không nói rõ trạng thái nào cho sửa, trạng thái nào khoá. | [#33](https://github.com/oNguyenVanManh/product-a-backlog/issues/33) |
+| `specs/system-design/database-design/incentive/INCENTIVE_DB.md` | Sửa | ghi đè dòng thưởng → thêm `entry_type`, `adjusts_id`, `posted_period`; đổi UNIQUE key | Góp ý review LAB-4 (A2): LAB-4 cho phép tính lại và **ghi đè** dòng thưởng đã chốt kỳ. Sai với sổ chỉ-ghi-thêm và sai với 完納奨励金 — điều chỉnh sau khi chốt kỳ phải là bút toán mới. | [EP-07 #7](https://github.com/oNguyenVanManh/product-a-backlog/issues/7) toàn bộ · [#55](https://github.com/oNguyenVanManh/product-a-backlog/issues/55) |
 | 20 file `technical-design/{FNC}_TECH.md` | Thêm | chỉ có tên chức năng → mỗi file có cơ chế kích hoạt, dữ liệu, quy tắc, xử lý lỗi, sequence diagram | Góp ý review LAB-4 (A3): 20 chức năng (không phải 15 như góp ý ước) mới chỉ có tên, dev không triển khai được nếu không hỏi lại. | 20 issue cha tương ứng |
-| `specs/system-design/database-design/settlement/PAYMENT_STATUS_DB.md` | Sửa | thiếu `paid_date` → thêm cột + ghi chú `null` = chưa trả ⇒ thưởng 0 | Góp ý review LAB-4 (B4): không có ngày trả thì không tính được "đúng hạn". | `IS-FNC-035` · `IS-FNC-036` |
-| `_extra/architecture.md` | Sửa | cụt ở mục 3 → khôi phục "Luồng dữ liệu chính" và "Nhánh loại giao dịch" | Góp ý review LAB-4 (B5): hai mục bị cắt mất, trong đó có định nghĩa 業務日 02:00–10:00 JST và 休市日. | `EP-15` · `IS-PRJ-04` |
-| `specs/system-design/database-design/authentication/APP_USER_DB.md` | Sửa | CHECK 4 giá trị → 6 vai trò | Góp ý review LAB-4 (B6): LAB-4 có 6 vai trò ứng dụng nhưng ràng buộc CHECK trong CSDL mới liệt kê 4. | `EP-02` |
+| `specs/system-design/database-design/settlement/PAYMENT_STATUS_DB.md` | Sửa | thiếu `paid_date` → thêm cột + ghi chú `null` = chưa trả ⇒ thưởng 0 | Góp ý review LAB-4 (B4): không có ngày trả thì không tính được "đúng hạn". | [#54](https://github.com/oNguyenVanManh/product-a-backlog/issues/54) · [#55](https://github.com/oNguyenVanManh/product-a-backlog/issues/55) |
+| `_extra/architecture.md` | Sửa | cụt ở mục 3 → khôi phục "Luồng dữ liệu chính" và "Nhánh loại giao dịch" | Góp ý review LAB-4 (B5): hai mục bị cắt mất, trong đó có định nghĩa 業務日 02:00–10:00 JST và 休市日. | [EP-15 #15](https://github.com/oNguyenVanManh/product-a-backlog/issues/15) · [#91](https://github.com/oNguyenVanManh/product-a-backlog/issues/91) |
+| `specs/system-design/database-design/authentication/APP_USER_DB.md` | Sửa | CHECK 4 giá trị → 6 vai trò | Góp ý review LAB-4 (B6): LAB-4 có 6 vai trò ứng dụng nhưng ràng buộc CHECK trong CSDL mới liệt kê 4. | [EP-02 #2](https://github.com/oNguyenVanManh/product-a-backlog/issues/2) |
 | 30 file `screen-specification/SCR_*_SPEC.md` | Sửa | `id:` frontmatter đánh số rời (`SPEC-09-23`) → truy ngược được tên file (`SPEC-SCR_07`) | Góp ý review LAB-4 (C1): không truy vết được từ mã sang file. | — (chỉ ảnh hưởng truy vết) |
 | 12 file `database-design/**/*_DB.md` | Sửa | cấu trúc tự do → đúng 4 mục của template BM-2-901-50 + ER diagram từng bảng | Góp ý review LAB-4 (C2): lệch template chuẩn công ty. | — |
-| `specs/settlement/screen-specification/SCR_12_SPEC.md` | Sửa | `exception_reason` bắt buộc luôn → chỉ bắt buộc khi `status = exception` | Góp ý review LAB-4 (C4): validation mâu thuẫn với luồng thường. | `IS-FNC-032` |
-| `specs/incentive/screen-specification/SCR_20_SPEC.md` | Sửa | 0 nhánh lỗi → 4 nhánh (`M_50`, `M_30`, `M_41`, nhánh điều chỉnh) | Góp ý review LAB-4 (C5): màn không mô tả hành vi khi lỗi. | `IS-FNC-037` |
+| `specs/settlement/screen-specification/SCR_12_SPEC.md` | Sửa | `exception_reason` bắt buộc luôn → chỉ bắt buộc khi `status = exception` | Góp ý review LAB-4 (C4): validation mâu thuẫn với luồng thường. | [#51](https://github.com/oNguyenVanManh/product-a-backlog/issues/51) |
+| `specs/incentive/screen-specification/SCR_20_SPEC.md` | Sửa | 0 nhánh lỗi → 4 nhánh (`M_50`, `M_30`, `M_41`, nhánh điều chỉnh) | Góp ý review LAB-4 (C5): màn không mô tả hành vi khi lỗi. | [#56](https://github.com/oNguyenVanManh/product-a-backlog/issues/56) |
 
 **Không bỏ tính năng nào** so với LAB-4. Không thêm màn hình mới — vẫn 30 màn web + 7 màn native.
 
@@ -36,11 +36,12 @@ Giả định chỉ lấp chỗ RFP/spec để ngỏ. Chỗ nào RFP đã nêu r
 | Giả định | Chỗ spec/RFP để ngỏ | Ảnh hưởng tới issue/estimate |
 |---|---|---|
 | Một sprint = 1 tuần, 5 ngày làm việc | RFP không nói nhịp lặp | Quyết định cap 4 MD/issue (≈3 ngày, gọn trong nửa sprint) → quyết định số issue = 471 |
-| Đội hình giữ nguyên 8 vai trò của cost sheet LAB-1 trong suốt 10 tháng | RFP không ràng buộc đội hình | `EP-19` chia PM 140 MD và BrSE 100 MD đều cho 10 tháng, mỗi tháng 1 issue con |
+| Đội hình giữ nguyên 8 vai trò của cost sheet LAB-1 trong suốt 10 tháng | RFP không ràng buộc đội hình | [EP-19 #19](https://github.com/oNguyenVanManh/product-a-backlog/issues/19) chia PM 140 MD và BrSE 100 MD đều cho 10 tháng, mỗi tháng 1 issue con |
 | Người phụ trách giả định: gán toàn bộ cho `oNguyenVanManh` | Bài tập không có đội thật | Không ảnh hưởng effort; chỉ để board có trường assignee |
 | Chức năng chỉ có 1 vai trò và ≤ 4 MD thì **không** tạo issue con | Không có chuẩn nào quy định | 4 issue cha là issue lá — giảm 4 issue rỗng nghĩa |
 | AIDD giảm 5% effort gộp, áp đều mọi vai trò | LAB-1 đã giả định AIDD nhưng không nói áp ở đâu | 1.059,1 MD gộp → 912 MD ròng (xem `estimate.md`) |
 | Sprint giả lập là **Sprint 1** của pha Requirement + khởi động nền tảng | Bài yêu cầu "ít nhất 1 sprint" | Quyết định issue nào vào Iteration đầu trong `progress-report.md` |
+| Chuyển đổi **3 năm** dữ liệu lịch sử | RFP không nói rõ bao nhiêu năm dữ liệu phải chuyển sang hệ thống mới | Giả định kế thừa nguyên từ LAB-1, không phát sinh mới ở LAB-5. Nếu khách yêu cầu nhiều hơn 3 năm thì [EP-17 #17](https://github.com/oNguyenVanManh/product-a-backlog/issues/17) phải ước lượng lại |
 
 ---
 

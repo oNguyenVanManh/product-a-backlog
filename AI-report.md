@@ -80,7 +80,8 @@ trừ nhau không. **0 lỗi.**
 
 Skill tự chọn 5 issue theo quy tắc xác định. Tôi sửa 3, giữ 2. Chi tiết ở [`estimate.md`](./estimate.md) mục 1.
 
-Đáng kể nhất: lần đầu tôi chọn **20 điểm** cho issue hàng đợi offline. Ma trận SWP chỉ có **đúng một
+Đáng kể nhất: lần đầu tôi chọn **20 điểm** cho issue hàng đợi offline
+([#311](https://github.com/oNguyenVanManh/product-a-backlog/issues/311)). Ma trận SWP chỉ có **đúng một
 ô** cho giá trị 20 — Scope 13, nghĩa là *"rộng cấp phát hành hoặc xuyên hệ thống"*. Gán nhãn đó cho
 một chức năng di động là sai cấu trúc, và vì hiệu chỉnh lan theo tầng nên nó sẽ kéo theo issue khác.
 Đổi sang 16 (Scope 8 × Complexity 3).
