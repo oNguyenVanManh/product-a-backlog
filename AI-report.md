@@ -21,7 +21,8 @@ kiểm trong một giây.
 
 ## 2. Con người review ở đâu, bắt được gì
 
-Tôi review ở **5 chốt**, không phải chỉ ở cuối.
+Tôi review ở **6 chốt**, không phải chỉ ở cuối. Năm chốt đầu bắt lỗi của từng bước; chốt cuối bắt
+lỗi mà năm chốt kia không thể thấy, vì nó nằm **giữa** các bước.
 
 ### Chốt 1 — sau khi AI lập bản đồ `FEA → thư mục spec`
 
@@ -76,7 +77,7 @@ Sau đó chạy bộ kiểm máy trên cả 346 dòng: SWP có khớp ô ma tr�
 đúng thứ tự không, `routine` có đứng một mình không, `single-component` và `multi-component` có loại
 trừ nhau không. **0 lỗi.**
 
-### Chốt 5 — kiểm 5 issue mẫu (chốt quan trọng nhất)
+### Chốt 5 — kiểm 5 issue mẫu (chốt đề bài bắt buộc)
 
 Skill tự chọn 5 issue theo quy tắc xác định. Tôi sửa 3, giữ 2. Chi tiết ở [`estimate.md`](./estimate.md) mục 1.
 
@@ -89,6 +90,41 @@ một chức năng di động là sai cấu trúc, và vì hiệu chỉnh lan th
 **Chỗ này AI chặn tôi lại, không phải ngược lại.** Tôi nêu lý do là *độ khó đồng bộ*, nhưng con số tôi
 chọn lại phát biểu một điều về *bề rộng*. Nếu AI cứ nhận con số 20 thì bản estimate sẽ mang một tuyên
 bố cấu trúc mà chính tôi không có ý nói.
+
+### Chốt 6 — đối chiếu cả bộ nộp với hệ thống thật, sau khi đã viết xong
+
+Năm chốt trên đều kiểm **trong lòng một bước**: bản đồ có đúng không, truy vấn có chạy đủ không, điểm
+có khớp ma trận không. Khi mọi file đã viết xong, tôi chạy thêm một lượt khác hẳn về bản chất: **đếm
+trên GitHub rồi so với chữ trong tài liệu.**
+
+Lượt này bắt được 7 lỗi, trong đó 3 lỗi nghiêm trọng:
+
+| Lỗi | Tài liệu nói | Thực tế | Đã xử lý |
+|---|---|---|---|
+| Số issue mang nhãn ràng buộc đặc thù | `task-breakdown.md`: **144**<br>`README.md`: **45** | **45** | Gắn nhãn cho 105 sub-issue còn thiếu → cả ba nơi đều **150** |
+| Ngày nộp bản LAB-4 mà backlog bám theo | **20/10/2026** | **11/10/2026** | Sửa theo ngày thật của file |
+| Trường `Status` trên Project | mô tả đầy đủ 5 mức | **464/471 item bỏ trống** | Đặt `Todo` cho toàn bộ item ngoài Sprint 1 |
+
+Bốn lỗi còn lại ở mức trung bình và nhỏ: 5 chỗ trong `estimate.md` viết `[#139]` trông như link nhưng
+không có đích; mã nội bộ `IS-FNC-014` trong `PREMISE.md` không tra được trên GitHub vì tiền tố `IS-`
+chỉ tồn tại trong script của tôi; một tham chiếu treo trong `task-breakdown.md` §4 trỏ tới dòng
+`PREMISE.md` §2 chưa hề tồn tại; và `README.md` khai "đã mở thử bằng cửa sổ ẩn danh" trong khi tôi
+mới kiểm bằng HTTP request sạch cookie.
+
+**Ba lỗi nghiêm trọng thuộc cùng một họ:** tài liệu và hệ thống thật kể hai câu chuyện khác nhau, mà
+mỗi bên **đọc riêng đều có vẻ ổn**. Không file nào tự mâu thuẫn. Con số 144 nằm trong một bảng được
+trình bày đàng hoàng. Ngày 20/10 không bị gì trong tài liệu phản bác. Board trắng phần `Status` chỉ
+sai khi đặt cạnh đoạn văn mô tả 5 mức trạng thái.
+
+Chúng **không lộ ra khi đọc lại tài liệu** — tôi đã đọc, và không thấy gì. Chúng chỉ lộ khi chạy
+`gh issue list --label kc-incentive | wc -l` rồi đặt kết quả cạnh con số trong file.
+
+**Bài học tôi rút ra cho cách làm việc với AI ở quy mô này:** khi AI sinh ra vừa *hệ thống* (471 issue
+trên GitHub) vừa *tài liệu mô tả hệ thống đó*, hai thứ được sinh từ hai lần chạy khác nhau và **sẽ
+trôi khỏi nhau** — không phải vì AI bịa, mà vì công thức đếm ở hai bên khác nhau một chi tiết nhỏ
+(bên đếm cả sub-issue, bên chỉ gắn nhãn tới issue cha). Review bằng cách *đọc* không bắt được loại
+trôi này. Phải có một bước **đối chiếu lời khai với nguồn sự thật**, và bước đó nên tự động hoá thành
+script chứ không làm bằng mắt.
 
 ### Một lỗi tôi mắc và phải sửa công khai
 
@@ -137,6 +173,12 @@ cho tôi biết phần nào trong 346 điểm là chắc và phần nào may r�
 **Cap 4 MD/issue tốt cho cả backlog nhưng không tốt cho sprint 1 tuần.** Sprint 1 có 4/7 issue cỡ 5–6
 SWP nên burndown nằm ngang suốt hai ngày đầu. Tôi chỉ phát hiện ra khi vẽ burndown, tức là **sau** khi
 đã tạo xong 471 issue. Lẽ ra phải thử xếp một sprint mẫu trước khi chốt độ hạt.
+
+**Chốt 6 chạy quá muộn, và chỉ chạy một lần.** Phép đối chiếu lời khai với GitHub chỉ được làm sau
+khi cả 6 file đã viết xong. Nếu nó chạy ngay sau bước gắn nhãn thì tôi đã bắt được chuyện 105
+sub-issue thiếu nhãn **trước khi** viết `task-breakdown.md`, thay vì phải sửa cả tài liệu lẫn hệ
+thống. Làm thật thì phép đối chiếu này nên là một script chạy sau mỗi lần AI sinh ra thứ gì đó lên
+hệ thống thật — rẻ, chạy vài giây, và nó bắt đúng loại lỗi mà đọc lại tài liệu không bao giờ thấy.
 
 **Tôi chưa kiểm được chéo chất lượng giữa 5 lô chấm.** Mỗi lô do một agent khác nhau chấm, và tôi chỉ
 kiểm tính hợp lệ (đúng ma trận, đúng từ vựng) chứ không kiểm **tính nhất quán giữa các lô** — liệu
