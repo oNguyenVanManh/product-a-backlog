@@ -35,10 +35,10 @@ Giả định chỉ lấp chỗ RFP/spec để ngỏ. Chỗ nào RFP đã nêu r
 
 | Giả định | Chỗ spec/RFP để ngỏ | Ảnh hưởng tới issue/estimate |
 |---|---|---|
-| Một sprint = 1 tuần, 5 ngày làm việc | RFP không nói nhịp lặp | Quyết định cap 4 MD/issue (≈3 ngày, gọn trong nửa sprint) → quyết định số issue = 471 |
+| Một sprint = 1 tuần, 5 ngày làm việc | RFP không nói nhịp lặp | Quyết định cap **3 MD**/issue — 3 ngày công = 60% sprint, còn đệm cho việc phát sinh → quyết định số issue = 537 |
 | Đội hình giữ nguyên 8 vai trò của cost sheet LAB-1 trong suốt 10 tháng | RFP không ràng buộc đội hình | [EP-19 #19](https://github.com/oNguyenVanManh/product-a-backlog/issues/19) chia PM 140 MD và BrSE 100 MD đều cho 10 tháng, mỗi tháng 1 issue con |
 | Người phụ trách giả định: gán toàn bộ cho `oNguyenVanManh` | Bài tập không có đội thật | Không ảnh hưởng effort; chỉ để board có trường assignee |
-| Chức năng chỉ có 1 vai trò và ≤ 4 MD thì **không** tạo issue con | Không có chuẩn nào quy định | 4 issue cha là issue lá — giảm 4 issue rỗng nghĩa |
+| Chức năng chỉ có 1 vai trò và ≤ 3 MD thì **không** tạo issue con | Không có chuẩn nào quy định | 4 issue cha là issue lá — giảm 4 issue rỗng nghĩa |
 | AIDD giảm 5% effort gộp, áp đều mọi vai trò | LAB-1 đã giả định AIDD nhưng không nói áp ở đâu | 1.059,1 MD gộp → 912 MD ròng (xem `estimate.md`) |
 | Sprint giả lập là **Sprint 1** của pha Requirement + khởi động nền tảng | Bài yêu cầu "ít nhất 1 sprint" | Quyết định issue nào vào Iteration đầu trong `progress-report.md` |
 | Chuyển đổi **3 năm** dữ liệu lịch sử | RFP không nói rõ bao nhiêu năm dữ liệu phải chuyển sang hệ thống mới | Giả định kế thừa nguyên từ LAB-1, không phát sinh mới ở LAB-5. Nếu khách yêu cầu nhiều hơn 3 năm thì [EP-17 #17](https://github.com/oNguyenVanManh/product-a-backlog/issues/17) phải ước lượng lại |

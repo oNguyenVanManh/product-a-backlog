@@ -19,11 +19,12 @@ markdown, 93 tài liệu nghiệp vụ.
 |---|---|
 | Epic | **19** (13 nhóm chức năng + 6 hạng mục xuyên suốt) |
 | Issue | 110 |
-| Sub-issue | 342 |
-| **Tổng issue trên Project** | **471** |
+| Sub-issue | 408 |
+| **Tổng issue trên Project** | **537** |
 | Tổng SWP (đã qua người kiểm) | **1392** |
 | Tổng giờ ước lượng | **7,328 h** = 916 MD |
 | Sprint giả lập đã chạy | **Sprint 1** (02/11 – 08/11/2026), 7 issue, 29 SWP, hoàn thành 51,7 % |
+| Sprint đã xếp lịch | **Sprint 2–4** (09/11 – 29/11/2026), 19 issue, 80 SWP — kế hoạch, chưa chạy |
 
 ---
 
@@ -89,8 +90,15 @@ Không có thư mục `skills/`: bài này dùng skill có sẵn của kit (`tkm
 | [`PREMISE.md`](./PREMISE.md) §1 — `entry_type`/`adjusts_id` cho bút toán điều chỉnh | [#7](https://github.com/oNguyenVanManh/product-a-backlog/issues/7) — EP-07 | Spec sửa sau LAB-4 |
 | [`PREMISE.md`](./PREMISE.md) §1 — 20 file technical-design mới | 20 issue cha rải khắp EP-01…EP-13 | Spec mới thêm sau LAB-4 |
 
+Mỗi issue chức năng mang nhãn ưu tiên **`P0`** (190 issue) hoặc **`P1`** (96 issue) lấy từ cột
+`Ưu tiên` của function list LAB-1, và **138 sub-issue** mang dòng `**Chờ:** #xxx` khai phụ thuộc
+theo chuỗi BE → FE/Native → QA — xem [`task-breakdown.md`](./task-breakdown.md) §4.
+
+Mỗi issue chức năng trỏ thẳng tới **tài liệu thiết kế LAB-4 đích danh** (screen spec, technical
+design, API, database) chứ không chỉ tên thư mục — xem bảng Truy vết trong thân từng issue.
+
 Năm nhóm ràng buộc nghiệp vụ đặc thù được gắn nhãn riêng trên GitHub (`kc-incentive`,
-`kc-negotiated`, `kc-two-tier`, `kc-human`, `kc-business-day`) và phủ **150 issue** (6 epic + 39 issue + 105 sub-issue). Chi tiết vì sao
+`kc-negotiated`, `kc-two-tier`, `kc-human`, `kc-business-day`) và phủ **174 issue**. Chi tiết vì sao
 tách riêng: [`task-breakdown.md`](./task-breakdown.md) mục 3.
 
 ---

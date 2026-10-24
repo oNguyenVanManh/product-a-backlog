@@ -64,11 +64,16 @@ ngày thứ ba. Nguyên nhân không phải đội làm chậm, mà là **cách 
 thước 5–6 SWP, tức gần trọn 3 ngày công, nên không có gì đóng được trong hai ngày đầu. Đường kế hoạch
 tuyến tính giả định việc đóng rải đều — giả định đó sai với backlog có issue cỡ 6 SWP trong sprint 1 tuần.
 
-**Rút ra cho Sprint 2:** cap 4 MD/issue vẫn hợp lý cho cả backlog, nhưng với sprint 1 tuần thì issue
+**Rút ra cho Sprint 2:** cap 3 MD/issue vẫn hợp lý cho cả backlog, nhưng với sprint 1 tuần thì issue
 cỡ 5–6 SWP nên tách đôi để burndown có tín hiệu sớm. Đây là **chỗ hở của chính nguyên tắc chia task**,
 ghi lại ở [`task-breakdown.md`](./task-breakdown.md) mục 1.
 
 ---
+
+> **Ghi chú đọc board:** ba issue chưa xong của Sprint 1 (#319, #321, #323) vẫn giữ nguyên
+> `Sprint 1` trên Project để giữ đúng lịch sử cam kết và để burndown ở trên khớp với board. Việc
+> chuyển chúng sang Sprint 2 diễn ra ở buổi lập kế hoạch Sprint 2, không phải bây giờ. Sprint 2–4
+> trên board hiện chứa **việc mới**, chưa gồm phần tồn này.
 
 ## 4. Rủi ro trễ
 
