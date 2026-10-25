@@ -21,10 +21,11 @@ markdown, 93 tài liệu nghiệp vụ.
 | Issue | 110 |
 | Sub-issue | 408 |
 | **Tổng issue trên Project** | **537** |
-| Tổng SWP (đã qua người kiểm) | **1392** |
-| Tổng giờ ước lượng | **7,328 h** = 916 MD |
-| Sprint giả lập đã chạy | **Sprint 1** (02/11 – 08/11/2026), 7 issue, 29 SWP, hoàn thành 51,7 % |
-| Sprint đã xếp lịch | **Sprint 2–4** (09/11 – 29/11/2026), 19 issue, 80 SWP — kế hoạch, chưa chạy |
+| Tổng SWP (đã qua người kiểm) | **1.701** |
+| Tổng giờ ước lượng | **8.524 h** = 1.065,5 MD |
+| Sprint giả lập đã chạy | **Sprint 1** (02/11 – 08/11/2026), 9 issue, 29 SWP, hoàn thành 37,9 % |
+| Sprint đã xếp lịch | **Sprint 2–12** (09/11/2026 – 31/01/2027), 137 issue — kế hoạch, chưa chạy |
+| Iteration phủ | **146/537 issue lá** = 27 % backlog, tức 12 tuần đầu. Phần còn lại giữ ở mức epic, xếp lịch khi tới gần |
 
 ---
 

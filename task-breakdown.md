@@ -14,7 +14,7 @@ hai nguyên tắc tôi bổ sung cho riêng đề này, lý do ghi ngay bên c�
 | 5 | **Không chồng lấn** | Sheet Functions (code tính năng) và sheet Project (khung, hạ tầng, kiểm thử, chuyển đổi) không giao nhau — đã đối chiếu từng dòng |
 | 6 | **Có định nghĩa xong, riêng cho từng chức năng** | 63 issue chức năng mang DoD viết từ chính file thiết kế: dẫn tên field, mã lỗi, quy tắc nghiệp vụ cụ thể. **290 dòng DoD, không dòng nào trùng dòng nào.** Issue hạ tầng/quy trình dùng DoD theo vai trò vì bản chất công việc là lặp lại |
 | 7 | **Gom theo nhóm chức năng** | 13 epic đầu bám đúng `FEA-01..13` của feature list LAB-1 |
-| 8 | **Trackable** | Mỗi issue có trường Status, Iteration, SWP, Giờ ước lượng trên GitHub Project |
+| 8 | **Trackable** | Mỗi issue có `Status`, `SWP`, `Giờ ước lượng` trên GitHub Project; `Iteration` xếp cho **146 issue lá của 12 tuần đầu** (27 % backlog), phần còn lại giữ ở mức epic cho tới khi tới gần |
 | 9 | **Truy vết ngược tới tài liệu đích danh** *(bổ sung)* | Mỗi issue chức năng trỏ thẳng tới **file thiết kế cụ thể** — `SCR_19_SPEC.md`, `INC_CALC_TECH.md`, `INCENTIVE_DB.md` — chứ không chỉ tên thư mục. Dev mở issue là biết đọc file nào. Lý do: break từ thư mục thì vẫn phải đoán trong 5 màn của nhóm xem màn nào là của mình |
 | 10 | **Tách riêng ràng buộc nghiệp vụ đặc thù** *(bổ sung)* | Issue chạm vào quy tắc đặc thù Nhật mang nhãn `kc-*` và nhắc lại quy tắc ngay trong thân issue. Lý do: đây đúng là nhóm lỗi mà LAB-2 bắt được nhiều nhất — dev đọc issue mà không thấy quy tắc thì sẽ áp khuôn phổ thông |
 

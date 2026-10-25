@@ -21,7 +21,7 @@ kiểm trong một giây.
 
 ## 2. Con người review ở đâu, bắt được gì
 
-Tôi review ở **8 chốt**, không phải chỉ ở cuối. Năm chốt đầu bắt lỗi của từng bước; chốt 6 bắt lỗi
+Tôi review ở **9 chốt**, không phải chỉ ở cuối. Năm chốt đầu bắt lỗi của từng bước; chốt 6 bắt lỗi
 nằm **giữa** các bước (tài liệu trôi khỏi hệ thống); chốt 7 bắt lỗi ở tầng cao nhất — **làm đúng thứ
 mình định làm, nhưng không phải thứ đề bài yêu cầu.**
 
@@ -151,7 +151,7 @@ Lượt tự chấm còn bắt thêm ba chỗ:
 | Backlog chưa được xếp lịch | Iteration phủ 7/537 issue = 1,5 % | Xếp thêm Sprint 2–4, phủ 26 issue |
 
 **Vì sao chốt 6 không bắt được lỗi này.** Chốt 6 hỏi *"con số trong tài liệu có khớp hệ thống không"*
-— và mọi con số đều khớp. 537 issue là thật, 1.392 SWP là thật, bảng truy vết có tồn tại. Lỗi nằm ở
+— và mọi con số đều khớp. Số issue là thật, tổng SWP là thật, bảng truy vết có tồn tại. Lỗi nằm ở
 tầng trên: **truy vết tới đúng chỗ nhưng chưa đủ sâu**, và cấu trúc backlog bám nguồn sai. Không có
 phép đếm nào phát hiện ra chuyện đó; phải đọc lại đề bài rồi hỏi "mình có làm đúng thứ được yêu cầu
 không", chứ không phải "mình có làm đúng thứ mình định làm không".
@@ -181,6 +181,55 @@ một. Mất hai phút và bắt được cả năm chỗ.
 **Rút ra:** thay thế hàng loạt an toàn khi sửa *mã nguồn* — trình biên dịch sẽ la lên. Nó nguy hiểm
 khi sửa *văn bản*, vì văn bản sai vẫn "chạy" được. Với tài liệu thì luật phải hẹp đến mức gần như
 liệt kê từng chỗ, hoặc đừng dùng.
+
+### Chốt 9 — chấm lại toàn bộ sau khi sửa, và đo xem việc sửa có giá trị không
+
+Lượt tự chấm ở chốt 7 để lại một món nợ: backlog đã tách lại nhưng điểm SWP thì chưa chấm lại, nên
+báo cáo HTML mô tả 471 issue trong khi board có 537. Lần này trả nợ: **chạy lại toàn bộ `tkm:estimate-swp`
+trên 410 issue lá**, làm lại vòng kiểm 5 mẫu, thay báo cáo.
+
+Kết quả đáng chú ý không nằm ở con số tổng mà ở **chất lượng bằng chứng**:
+
+| | Lần 1 | Lần 2 |
+|---|--:|--:|
+| `evidenceStatus = EXTRACTED` | 2/346 | **215/410** |
+| `confidence = high` | 0/346 | **87/410** |
+| Tổng SWP | 1.392 | **1.701** |
+| Quy ra giờ | 916 MD | **1.065,5 MD** |
+
+Thang chấm không đổi, hệ số quy giờ không đổi. Thứ đổi là **thân issue**: lần 1 chỉ có khung mẫu
+rỗng nên bộ chấm đoán từ tiêu đề; lần 2 có bảng truy vết trỏ tài liệu thiết kế đích danh và điều
+kiện nghiệm thu cụ thể.
+
+**Phép đo tự nhiên nằm ngay trong dữ liệu.** Năm lô chấm được chia theo số issue, tình cờ tách ra
+hai nhóm: lô toàn issue `FNC-*` (đã gắn tài liệu) đạt **57/82** dòng `high`; lô toàn issue `PRJ-*`
+(thân còn mỏng) đạt **0/82**. Năm bộ chấm chạy độc lập, không biết nhau, đều nêu cùng một lý do. Đây
+là bằng chứng đo được rằng việc gắn tài liệu đích danh có giá trị thật với người đọc issue, chứ
+không chỉ làm hồ sơ đẹp.
+
+**Điều này nói ngược lại về bản ước lượng đầu tiên.** 916 MD không phải một ước lượng sai — nó là
+ước lượng đúng trên một backlog chưa đủ thông tin để chấm. Con số đó phản ánh *độ mỏng của mô tả
+công việc* nhiều hơn *khối lượng công việc thật*. Bài học: **khi AI chấm điểm trên tài liệu do chính
+mình sinh ra, chất lượng tài liệu quyết định chất lượng điểm — và cả hai đều có thể cùng mỏng mà
+trông vẫn hoàn chỉnh.**
+
+### Ba lỗi bắt được trong lượt chấm lại
+
+**Lỗi 1 — bộ chấm phát hiện 4 issue trùng nhau mà mắt tôi không thấy.** Bộ chấm lô 5 báo `#534/#535`
+và `#536/#537` trùng tên trùng thân. Kiểm ra: tiêu đề *có* phân biệt `1/2` và `2/2`, nhưng **thân thì
+giống hệt từng ký tự** — chúng là bản sao của issue cha khi tách, không được đánh dấu phần nào. Mắt
+tôi đọc tiêu đề thấy khác là tưởng đã khác. Đã sửa cả sáu issue liên quan.
+
+**Lỗi 2 — lệnh mở rộng iteration xoá sạch dữ liệu cũ.** Mở rộng Sprint từ 4 lên 12 bằng
+`updateProjectV2Field` khiến GitHub coi đó là **thay cấu hình trường**, và **26 gán sprint cũ biến
+mất không báo**. Lệnh trả về thành công. Chỉ phát hiện vì tôi kiểm lại ngay sau đó. Đây đúng kiểu
+lỗi nguy hiểm nhất với API: thao tác báo thành công, dữ liệu mất âm thầm.
+
+**Lỗi 3 — thang điểm rời rạc kéo theo tuyên bố cấu trúc ngoài ý muốn.** Lặp lại lần thứ hai: với
+`#313`, lý do nâng điểm là *độ khó đồng thời*, nhưng con số 8 chỉ tồn tại ở ô S5×C2 — bề rộng tăng,
+độ khó *giảm*. Lần đầu là `#311` với con số 20 chỉ tồn tại ở Scope 13 = "cấp phát hành". **Quy tắc
+rút ra: luôn kiểm ô ma trận tương ứng trước khi chốt, không chỉ kiểm con số.** Lần này tôi nêu đánh
+đổi trước, người duyệt nghe xong vẫn giữ 8 điểm, và quyết định được ghi nguyên văn cả hai vế vào hồ sơ.
 
 ### Một lỗi tôi mắc và phải sửa công khai
 
